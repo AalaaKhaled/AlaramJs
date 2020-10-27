@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+          #parent{
+             background-color: rgb(243, 243, 243);
+             width: 420px;
+             height: 200px;
+             position: relative;
+             
+          }
+          #gray{
+            background-color: rgb(221, 221, 221);
+            width: 320px;
+            height: 100px;
+            padding: 15px;
+            position: absolute;
+            top: 17%;
+            left: 8%;
+            
+          }
+          #label{
+              text-align: center;
+          }
+          #label label{
+              color:rgb(167, 164, 164);
+          }
+          .alarmWindow{
+	            position:absolute;
+	            width:420px;
+	            height:200px;
+            	top: 0%;
+                left: 0%;
+	            background-color:white;
+	            padding:15px;
+             }
+            .b{
+              background-color: rgb(244, 244, 244);
+              width: 100px;
+              height: 100px;
+              position: relative;
+              display: inline-block;
+            }
+            .f{
+               background-color: white;
+               width: 70px;
+               height: 30px;
+               position: absolute;
+               top: 42%;
+               left: 14%;
+               
+            }
+            .alarmlabel{
+                text-align: center;
+                font-size: 20px;
+               
+                
+            }
+            
+            .hide{
+	            display:none;
+            }
+            
+      </style>
+  </head>
+  <body>
+     <div id="parent">
+     
+        <div id="gray">
+            <div id="label">
+                <label id = "MON">MON</label>&nbsp;&nbsp;
+                <label id = "TUE">TUE</label>&nbsp;&nbsp;
+                <label id = "WED">WED</label>&nbsp;&nbsp;
+                <label id = "THU">THU</label>&nbsp;&nbsp;
+                <label id = "FRI">FRI</label>&nbsp;&nbsp;
+                <label id = "SAT">SAT</label>&nbsp;&nbsp;
+                <label id = "SUN">SUN</label>
+            </div>
+            <div style="display: inline;">
+            <img src="alarmTh.png" style=" position: absolute;left: 0;bottom: 0; padding-bottom: 15px;padding-left: 15px;" onclick="alarm()">
+            <h1 style="text-align: center;font-size: 50px;"><span id="hours">04</span>:<span id="min">17</span>:<span id="sec">36</span></h1>
+            <label id ="p" style=" position: absolute;right: 0;bottom: 0; padding-bottom: 15px;padding-right: 15px;">AM</label>
+            </div>
+        </div>
+     </div>
+     <div class="alarm">
+        <div id="window" class="alarmWindow hide" >
+            <img src="close.png" style="position: absolute;right: 0;top: 0; padding-top: 15px;padding-right: 15px;" onclick="cclose()">
+            <h2 style="text-align: center;">SET ALARM AFTER</h2>
+            <center>
+            <div>
+                <div class="b">
+                    <p style="text-align: center;">HOURS</p>
+                    <div class="f"><input type="text" maxlength="2" size="2" class="alarmlabel" id="houralarm" placeholder="0"></div>
+                </div>&nbsp;&nbsp;
+                <div class="b">
+                    <p style="text-align: center;">MINUTES</p>
+                    <div class="f"><input type="text" class="alarmlabel" id="minalarm" placeholder="0" maxlength="2" size="2"></div>
+                </div>&nbsp;&nbsp;
+                <div class="b">
+                    <p style="text-align: center;">SECONDS</p>
+                    <div class="f"><input type="text" class="alarmlabel" id="secalarm" placeholder="0" maxlength="2" size="2"></div>
+                </div>
+            </div>
+        </center>
+           <br>
+           <br>
+           <center>
+            <div id="Set" onclick="set()" style="display: inline-block;background-color:rgb(133, 211, 225);width: 50px;height: 50px;border: solid 2px rgb(165, 195, 199);"><p style="padding-top: 2px;color: white;">Set</p></div>&nbsp;
+            <div id="Clear" onclick="cclear()" style="display: inline-block;background-color:rgb(242, 166, 180);width: 50px;height: 50px;border: solid 2px rgb(223, 165, 178);"><p style="padding-top: 2px;color: white;">Clear</p></div>
+        </center>
+        </div>
+     <script src="calendar.js"></script> 
+  </body>
+</html>
